@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: Arial, sans-serif;
+}
+
+.nav-header {
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+.logo-section {
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-section .logo {
+    width: 65px;
+    height: 60px;
+    border-radius: 60%;
+}
+
+.logo-section h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #039903e1;
+}
+.register-section button {
+    width: 100px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+
+.login-button {
+    background-color: #efebeb;
+}
+
+.login-button:hover {
+    background-color: #bebaba;
+}
+
+.register-button {
+    background-color: #025b02;
+}
+
+.login-button a {
+    color: #020202;
+}
+
+.register-button a {
+    color: #ffffff;
+}
+
+.register-button:hover{
+    background-color: #006a00e1;
+}
+
+.bg-container {
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.text-section {
+    width: 90%;
+}
+.banner-section {
+    background-color: #efebeb;
+}
+.title-heading {
+    font-size: 42px;
+    font-weight: 700;
+    color:#144201;
+}
+.title-heading span {
+    font-weight: 800;
+    color: #2b8f01;
+}
+
+div button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+div button a:hover {
+    text-decoration: none;
+}
+
+.button-section button{
+    border: none;
+    outline: none;
+    border-radius: 9px;
+    width: 136px;
+    padding: 10px 15px;
+    margin-right: 10px;
+}
+
+.btn-width {
+   background-color: #fff;
+}
+
+.desc {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2f562f;
+}
+.card-container {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.image-contianer {
+    padding: 30px 0px;
+}
+
+.banner-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+/* ---------------------- why-choose-container ---------------------*/
+
+.why-choose-container {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-hedaing {
+    font-size: 32px;
+    font-weight: 700;
+    color:#144201;
+}
+
+.why-card-container {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.why-card {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.why-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #d1cfcf8b;
+    padding: 10px;
+}
+
+.why-card .card-name {
+    font-size: 22px;
+    font-weight: 600;
+    columns: #144201;
+}
+
+.why-card .card-ders {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2f562f;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #025b02;
+}
+
+.footer-section {
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-section .footer-heading {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.footer-section .footer-desc {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer-section .footer-btn {
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.footer-section .footer-btn a {
+    color: #025b02;
+}
+
+/* --------------------- Login Form ----------------------*/
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.login-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.login-card h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.login-card .form-control {
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+.btn-login {
+    background-color: #2e7d32;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.btn-login:hover {
+    background-color: #256528;
+}
+
+.links {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------- Register Form --------------------- */
+
+
+.card {
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.app-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2d7a2d;
+    margin-left: 8px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.btn-custom {
+    background-color: #2d7a2d;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #256b25;
+}
+
+.note {
+    font-size: 13px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #2d7a2d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* ---------------------- Role Section ----------------------- */
+
+.container-role {
+    max-width: 950px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.app-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2d7a2d;
+    margin-left: 8px;
+}
+
+h4 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p.subtext {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.card-role {
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-role:hover {
+    transform: translateY(-5px);
+}
+
+.card-role img {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto 10px auto;
+}
+
+.card-role h5 {
+    font-weight: bold;
+    color: #2d7a2d;
+    margin-bottom: 10px;
+}
+
+.card-role ul {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-custom {
+    background-color: #2d7a2d;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #256b25;
+}
+
+.back-btn {
+    width: 200px;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #2d7a2d;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- Large Screen ------------------------- */
+
+@media (min-width:767px){
+    .text-section {
+        width: 50%;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .image-contianer {
+        width: 40%;
+    }
+    .banner-image {
+        width: 500px;
+    }
+    .why-card-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+}

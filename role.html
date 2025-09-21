@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriConnect - Choose Role</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    <script src="https://kit.fontawesome.com/760a783ab5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./styleOne.css">
+  </style>
+</head>
+<body>
+
+  <div class="container-role">
+    <!-- Logo & App Name -->
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dwxqqx0oe/image/upload/v1758428173/logo_viltki.png" alt="Logo">
+      <span class="app-name">AgriConnect</span>
+    </div>
+
+    <!-- Title -->
+    <h4>Choose Your Role</h4>
+    <p class="subtext">Select how you'd like to use AgriConnect</p>
+
+    <!-- Role Cards -->
+    <div class="row justify-content-center g-4">
+      <!-- Tenant Card -->
+      <div class="col-md-5">
+        <div class="cards card-role p-3 h-100">
+          <img src="https://res.cloudinary.com/dwxqqx0oe/image/upload/v1758428203/tractor_met151.png" alt="Tenant">
+          <h5>I'm a Tenant</h5>
+          <p>Looking to rent agricultural land for farming</p>
+          <ul class="ml-5">
+            <li> Browse available agricultural lands</li>
+            <li> Book and manage rentals</li>
+            <li> Connect with landlords directly</li>
+            <li> Track your farming operations</li>
+          </ul>
+          <button class="btn btn-custom w-100" onclick="chooseRole('tenant')">Continue as Tenant</button>
+        </div>
+      </div>
+
+      <!-- Landlord Card -->
+      <div class="col-md-5">
+        <div class="cards card-role p-3 h-100">
+          <img src="https://res.cloudinary.com/dwxqqx0oe/image/upload/v1758428310/home_act3iw.png" alt="Landlord">
+          <h5>I'm a Landlord</h5>
+          <p>I have agricultural land to rent out</p>
+          <ul class="ml-5">
+            <li> List your agricultural properties</li>
+            <li> Manage rental agreements</li>
+            <li> Connect with reliable tenants</li>
+            <li> Track rental income and status</li>
+          </ul>
+          <button class="btn btn-custom w-100" onclick="chooseRole('landlord')">Continue as Landlord</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-btn w-25">← Back to Home</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

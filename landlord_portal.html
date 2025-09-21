@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriConnect - Landlord Portal</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f7faf7;
+    }
+    .navbar {
+      background-color: #2f7d32;
+    }
+    .navbar-brand, .nav-link, .navbar-text {
+      color: #fff !important;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .btn-success {
+      background-color: #2f7d32;
+      border: none;
+      border-radius: 10px;
+    }
+    .status-badge {
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 12px;
+    }
+    .status-rented {
+      background-color: #2f7d32;
+      color: #fff;
+    }
+    .status-available {
+      background-color: #e3f2fd;
+      color: #0d47a1;
+    }
+    .user-name {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 0px;
+    }
+    .user-number {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo-section {
+        align-items: center;
+        gap: 10px;
+    }
+    .logo-section .logo {
+        width: 65px;
+        height: 60px;
+        border-radius: 60%;
+    }
+
+    .logo-section h1 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #039903e1;
+    }
+    .domain-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .domain-section h1{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    .domain-section p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-light bg-white shadow-sm p-3">
+    <div class="container-fluid">
+        <div class="logo-section d-flex flex-row">
+            <img class="logo" src="https://res.cloudinary.com/dwxqqx0oe/image/upload/v1758428173/logo_viltki.png" alt="agriconnent-logo">
+            <div class="domain-section pt-2">
+                <h1>AgriConnect</h1>
+                <p>Landlord Portal</p>
+            </div>
+        </div>  
+        <div class="d-flex align-items-center">
+            <div class="text-end me-3 profile-info mt-3">
+                <h1 class="user-name" id="userName"></h1>
+                <p class="text-muted user-number" id="userNumber"></p>
+            </div>
+            <button class="btn btn-outline-success btn-sm" id="logoutBtn">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard -->
+  <div class="container py-4" id="dashboardPage" style="display: block;">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h4 class="fw-bold">Dashboard</h4>
+      <button class="btn btn-success" onclick="showAddLand()">+ Add New Land</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="row mb-4 text-center">
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Total Properties</h6>
+          <h4 id="totalProps">3</h4>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Rented Properties</h6>
+          <h4 id="rentedProps">1</h4>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Available Properties</h6>
+          <h4 id="availableProps">2</h4>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card p-3">
+          <h6>Annual Revenue</h6>
+          <h4 class="text-success" id="annualRevenue">₹273,384</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Properties -->
+    <h5 class="fw-bold mb-3">Your Properties</h5>
+    <div id="propertiesList">
+
+      <!-- Property 1 -->
+      <div class="card p-3 mb-3">
+        <div class="d-flex justify-content-between">
+          <h5 class="fw-bold">Heritage Farm</h5>
+          <span class="status-badge status-rented">Rented</span>
+        </div>
+        <p><strong>Location:</strong> Punjab, Amritsar</p>
+        <p><strong>Size:</strong> 6 Acres | <strong>Price:</strong> ₹25,000/acre</p>
+        <p><strong>Soil Type:</strong> Fertile Alluvial | <strong>Water Source:</strong> Canal + Borewell</p>
+        <p class="text-success"><strong>Annual Revenue:</strong> ₹150,000</p>
+        <div class="border-top pt-2">
+          <h6>Tenant Details:</h6>
+          <p class="mb-1"><strong>Name:</strong> Ramesh Kumar</p>
+          <p class="mb-1"><strong>Phone:</strong> +91 98765 43210</p>
+          <p><strong>Rental Period:</strong> 2024-02-15 to 2024-12-15</p>
+          <button class="btn btn-outline-success btn-sm">Contact Tenant</button>
+        </div>
+      </div>
+
+      <!-- Property 2 -->
+      <div class="card p-3 mb-3">
+        <div class="d-flex justify-content-between">
+          <h5 class="fw-bold">Sunrise Agricultural Land</h5>
+          <span class="status-badge status-available">Available</span>
+        </div>
+        <p><strong>Location:</strong> Punjab, Ludhiana</p>
+        <p><strong>Size:</strong> 4 Acres | <strong>Price:</strong> ₹28,000/acre</p>
+        <p><strong>Soil Type:</strong> Clay Loam | <strong>Water Source:</strong> Tube well</p>
+        <p class="text-success"><strong>Annual Revenue:</strong> ₹112,000</p>
+      </div>
+
+      <!-- Property 3 -->
+      <div class="card p-3 mb-3">
+        <div class="d-flex justify-content-between">
+          <h5 class="fw-bold">Rice Farm</h5>
+          <span class="status-badge status-available">Available</span>
+        </div>
+        <p><strong>Location:</strong> Guntur, India</p>
+        <p><strong>Size:</strong> 4 Acres | <strong>Price:</strong> ₹18,434/acre</p>
+        <p><strong>Soil Type:</strong> Clay | <strong>Water Source:</strong> Borewell</p>
+        <p class="text-success"><strong>Annual Revenue:</strong> ₹11,384</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Add Land Page -->
+  <div class="container py-4" id="addLandPage" style="display: none;">
+    <h4 class="fw-bold mb-3">Add New Land</h4>
+    <div class="card p-4">
+      <form id="landForm">
+        <div class="mb-3">
+          <label class="form-label">Property Name *</label>
+          <input type="text" class="form-control" id="propertyName" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Location *</label>
+          <input type="text" class="form-control" id="location" required>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Size (Acres) *</label>
+            <input type="number" class="form-control" id="size" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Price per Acre (₹) *</label>
+            <input type="number" class="form-control" id="price" required>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Soil Type</label>
+          <select class="form-select" id="soilType">
+            <option>Clay</option>
+            <option>Loam</option>
+            <option>Sandy</option>
+            <option>Alluvial</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Water Source</label>
+          <select class="form-select" id="waterSource">
+            <option>Borewell</option>
+            <option>Tube well</option>
+            <option>Canal</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Add Land</button>
+        <button type="button" class="btn btn-outline-secondary ms-2" onclick="showDashboard()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap & JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function showAddLand() {
+      document.getElementById('dashboardPage').style.display = 'none';
+      document.getElementById('addLandPage').style.display = 'block';
+    }
+    function showDashboard() {
+      document.getElementById('dashboardPage').style.display = 'block';
+      document.getElementById('addLandPage').style.display = 'none';
+    }
+
+    // Handle form submission
+    document.getElementById('landForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get values
+      const name = document.getElementById('propertyName').value;
+      const location = document.getElementById('location').value;
+      const size = document.getElementById('size').value;
+      const price = document.getElementById('price').value;
+      const soil = document.getElementById('soilType').value;
+      const water = document.getElementById('waterSource').value;
+      const desc = document.getElementById('description').value;
+
+      const annualRevenue = size * price; // simple calculation
+
+      // Create property card
+      const propertyCard = `
+        <div class="card p-3 mb-3">
+          <div class="d-flex justify-content-between">
+            <h5 class="fw-bold">${name}</h5>
+            <span class="status-badge status-available">Available</span>
+          </div>
+          <p><strong>Location:</strong> ${location}</p>
+          <p><strong>Size:</strong> ${size} Acres | <strong>Price:</strong> ₹${price}/acre</p>
+          <p><strong>Soil Type:</strong> ${soil} | <strong>Water Source:</strong> ${water}</p>
+          <p class="text-success"><strong>Annual Revenue:</strong> ₹${annualRevenue.toLocaleString()}</p>
+          <p><em>${desc}</em></p>
+        </div>
+      `;
+
+      // Append to property list
+      document.getElementById('propertiesList').insertAdjacentHTML('beforeend', propertyCard);
+
+      // Update stats
+      const totalProps = document.getElementById('totalProps');
+      const availableProps = document.getElementById('availableProps');
+      const annualRevenueElem = document.getElementById('annualRevenue');
+
+      totalProps.textContent = parseInt(totalProps.textContent) + 1;
+      availableProps.textContent = parseInt(availableProps.textContent) + 1;
+
+      const currentRevenue = parseInt(annualRevenueElem.textContent.replace(/₹|,/g, ""));
+      annualRevenueElem.textContent = "₹" + (currentRevenue + annualRevenue).toLocaleString();
+
+      // Reset form
+      document.getElementById('landForm').reset();
+
+      // Switch back to dashboard
+      showDashboard();
+    });
+    document.getElementById('logoutBtn').addEventListener('click', () => window.location.href="index.html")
+    const userName = document.getElementById('userName');
+    const userNumber = document.getElementById('userNumber');
+
+    const data = JSON.parse(localStorage.getItem('createAccount'));
+
+    userName.textContent = data[0].fullName;
+    userNumber.textContent = data[0].mobileNumber;
+
+  </script>
+</body>
+</html>
